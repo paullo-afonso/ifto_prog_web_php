@@ -39,6 +39,29 @@ echo '<pre>';
 //     print_r($cliente['nome'].' --- '. $cliente['telefone']. '<br>');
 // }
 
-foreach ($clientes as $key => $value) {
-    print_r((($key=='vip')?'*':'').$value['nome'] . ' --- ' . $value['telefone']. '<br>');
+// foreach ($clientes as $key => $cliente) {
+//     $divisao = '';
+//     foreach ($cliente as $coluna){
+//         print_r("$divisao$coluna");
+//         $divisao = ' <---> ';
+//     }
+//     echo '<br>';
+    
+// }
+
+// function somar($x, $y){
+//     return $x + $y;
+// }
+
+// echo somar(5,8);
+
+// function somar($x, $y){
+//     echo $x + $y;
+// }
+
+// somar(5,8);
+
+function addCliente($nome, $telefone, $tipo = 'Normal'){
+    $clientes[] = array('nome'=> $nome, 'telefone' => $telefone, 'tipo' => $tipo );
 }
+
